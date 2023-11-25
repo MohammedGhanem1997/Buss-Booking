@@ -1,0 +1,1123 @@
+{
+	"info": {
+		"_postman_id": "c36969d2-8f9e-4687-aaee-dc4e4c17eff9",
+		"name": "booking",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24230505"
+	},
+	"item": [
+		{
+			"name": "Client-Api",
+			"item": [
+				{
+					"name": "booking Copy",
+					"item": [
+						{
+							"name": "add booking",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiODE5ZjYxMzVkZjg3Y2Y1ZDJjMmIzZGFkMTU2MWQ2NGJhNDBiZDUyZDBhNzVjZTAxYzc4NWFiOTY3NDQwYjJkNWEwYTUxYTMzMzFhNjZhMzMiLCJpYXQiOjE3MDA4NTYzNzQuMzEzMDcxLCJuYmYiOjE3MDA4NTYzNzQuMzEzMDcyLCJleHAiOjE3MzI0Nzg3NzQuMzA4MTcyLCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.M0YOl17UoQ84ml_9PGEyGFVqaNWynnKcmPzuT4KMzbnxk0APEXnLSsTmg7KG0QAT1Dz9Owi1cUG_67N3M-H-dpLeL7ge3lcRLllf6rTH1gE--M4u8gYfmSe4Oh9NR-iad9FGR-2RLA7UFEAD9HgQXuOZrqGsmYHhaN-IrX3zwEu-Co6zzZr36v7En7mj5ozIiQnBnaD5Mfm-GtqYOoT3VzpaWKVqipJZKPpamxoppBE-IenVQkLcb3UePOt0CvQQ27019w-4Kk0fQdETOsXefjs25RXqnVePjvlQUfjXjesbt4dfYxeXnXG3lJzSa7wiHk5_a_f3rSJi34PmQl84DN4g0mc3CMBnX3HfEhjhK7axaO0l8FVgaf00cqyLrG_4LePncQD7FyciWpJ_qo5qW1BUZtRt9MdfrZUT2dOIdLEDfPceS9c0OsMBjKadxyEC01WZaj8OWhKXxqWJmeIWqoNE7ATLPYwX9CQjRS8-adixgXfKy9TBIrNF2AZW3wlbH_Qem3eA6_tWJ8L3WR6dWDmohU-G2fe-JFG1NBoanbxpLS4tV7XCdC4RPgYEyiORgeSq8Pr2Nplv4Rh6v5JN97Pr8tLsMVZeXjIiamrmdcXiwbWKfNwEvLbutAld1ARXkYVsB_H6-h8VRSrXK0PyPOx0SK3lUnKRj5_Wvgrs7ps",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"ride_id\": 50,\n     \"name\": \"ghanem\",\n    \"phone\": \"01093072634\",\n    \"email\": \"ghanem@gmail.com\",\n    \"status\":\"Confirmed\"\n    \n \n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api-client/v1/bookings",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api-client",
+										"v1",
+										"bookings"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update booking",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiODY3MGU0NTJmZTY2MjE2YjI1ZDhiMzViOWUzYjllYzQxYzBjZTI2ODRhMmVkNWFlYzY1MmJkZGIzYWEyYWU0Mjc1NjI0YTExM2RkYzY4MDIiLCJpYXQiOjE3MDA3NDU3ODIuOTc4NTg5LCJuYmYiOjE3MDA3NDU3ODIuOTc4NTkxLCJleHAiOjE3MzIzNjgxODIuOTc0NDIyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.u7VBA8BHMvYOqQNDt7hHHFKud54b-n5aKFAC-KdGp8k0swsKQqJZJI8jNwsDplkz5uRnDlyZ2NGxm2kuTbelnP9QZZpSm-rrm8jUu5bE3DV1VvI91AdP6-vzfeMp7EYAXJreizg5uoVFrIBWnKCK75fdHORa2fvFQP9krlIkdMiU3h8kztfXp6AGA1a5Ei5Dom7JVYdWj3inWOscRmB-Q8LsRXKPbEWCtcj7cFVDgaNEPZ-QC3V4MeJk15bmHmr9GfQBONRlg1vrPoakTcoHjJ9KnwG4y8D7_go07Urg6dInB_ktck1EFcl2O2KSUrsrBvFnBPS6ng_02Cj76TwsnG3hoGnZ5fU6jtA0JITTxyRDEpf4BkYi7nzIBcakk3P5lzzbDO7UV8XO1BHI97s9oXeyFNnFr7p3bSHTlvdHrxwE94wnZBZ-7vuRE9cCFlFh23-8FiXJJ06OtBSZ2Q--ZxV12Lt5Iw-FQksQYTXwWip8RiJRA-Gwkx1rVP5DYNLipnBpzG7De6xCweMe7noSUIJau9pxD9Cj4SrTtRChoI6FUY5ivgiL5YQtkBpwoGDKLFtM-woTe7wmzFO2Nh3Qeyat8F2gisB3B346b2QMPULACtvKfgmVrX71RDm9KcDo97G0SjYRBVY1lUI_6fhe4ppX01hM8ylm_Zg_NdrKr7c",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"ride_id\": 50,\n   \"name\": \"Cairo\",\n    \"phone\": \"01093072634\",\n    \"email\": \"ghanem\",\n    \"status\": \"success\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/v1/bookings/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"bookings",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "View booking",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true,
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiODE5ZjYxMzVkZjg3Y2Y1ZDJjMmIzZGFkMTU2MWQ2NGJhNDBiZDUyZDBhNzVjZTAxYzc4NWFiOTY3NDQwYjJkNWEwYTUxYTMzMzFhNjZhMzMiLCJpYXQiOjE3MDA4NTYzNzQuMzEzMDcxLCJuYmYiOjE3MDA4NTYzNzQuMzEzMDcyLCJleHAiOjE3MzI0Nzg3NzQuMzA4MTcyLCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.M0YOl17UoQ84ml_9PGEyGFVqaNWynnKcmPzuT4KMzbnxk0APEXnLSsTmg7KG0QAT1Dz9Owi1cUG_67N3M-H-dpLeL7ge3lcRLllf6rTH1gE--M4u8gYfmSe4Oh9NR-iad9FGR-2RLA7UFEAD9HgQXuOZrqGsmYHhaN-IrX3zwEu-Co6zzZr36v7En7mj5ozIiQnBnaD5Mfm-GtqYOoT3VzpaWKVqipJZKPpamxoppBE-IenVQkLcb3UePOt0CvQQ27019w-4Kk0fQdETOsXefjs25RXqnVePjvlQUfjXjesbt4dfYxeXnXG3lJzSa7wiHk5_a_f3rSJi34PmQl84DN4g0mc3CMBnX3HfEhjhK7axaO0l8FVgaf00cqyLrG_4LePncQD7FyciWpJ_qo5qW1BUZtRt9MdfrZUT2dOIdLEDfPceS9c0OsMBjKadxyEC01WZaj8OWhKXxqWJmeIWqoNE7ATLPYwX9CQjRS8-adixgXfKy9TBIrNF2AZW3wlbH_Qem3eA6_tWJ8L3WR6dWDmohU-G2fe-JFG1NBoanbxpLS4tV7XCdC4RPgYEyiORgeSq8Pr2Nplv4Rh6v5JN97Pr8tLsMVZeXjIiamrmdcXiwbWKfNwEvLbutAld1ARXkYVsB_H6-h8VRSrXK0PyPOx0SK3lUnKRj5_Wvgrs7ps",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"ride_id\": 50,\n   \"name\": \"Cairo\",\n    \"phone\": \"01093072634\",\n    \"email\": \"ghanem\",\n    \"status\": \"success\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api-client/v1/bookings",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api-client",
+										"v1",
+										"bookings"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "show my booking",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true,
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiODE5ZjYxMzVkZjg3Y2Y1ZDJjMmIzZGFkMTU2MWQ2NGJhNDBiZDUyZDBhNzVjZTAxYzc4NWFiOTY3NDQwYjJkNWEwYTUxYTMzMzFhNjZhMzMiLCJpYXQiOjE3MDA4NTYzNzQuMzEzMDcxLCJuYmYiOjE3MDA4NTYzNzQuMzEzMDcyLCJleHAiOjE3MzI0Nzg3NzQuMzA4MTcyLCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.M0YOl17UoQ84ml_9PGEyGFVqaNWynnKcmPzuT4KMzbnxk0APEXnLSsTmg7KG0QAT1Dz9Owi1cUG_67N3M-H-dpLeL7ge3lcRLllf6rTH1gE--M4u8gYfmSe4Oh9NR-iad9FGR-2RLA7UFEAD9HgQXuOZrqGsmYHhaN-IrX3zwEu-Co6zzZr36v7En7mj5ozIiQnBnaD5Mfm-GtqYOoT3VzpaWKVqipJZKPpamxoppBE-IenVQkLcb3UePOt0CvQQ27019w-4Kk0fQdETOsXefjs25RXqnVePjvlQUfjXjesbt4dfYxeXnXG3lJzSa7wiHk5_a_f3rSJi34PmQl84DN4g0mc3CMBnX3HfEhjhK7axaO0l8FVgaf00cqyLrG_4LePncQD7FyciWpJ_qo5qW1BUZtRt9MdfrZUT2dOIdLEDfPceS9c0OsMBjKadxyEC01WZaj8OWhKXxqWJmeIWqoNE7ATLPYwX9CQjRS8-adixgXfKy9TBIrNF2AZW3wlbH_Qem3eA6_tWJ8L3WR6dWDmohU-G2fe-JFG1NBoanbxpLS4tV7XCdC4RPgYEyiORgeSq8Pr2Nplv4Rh6v5JN97Pr8tLsMVZeXjIiamrmdcXiwbWKfNwEvLbutAld1ARXkYVsB_H6-h8VRSrXK0PyPOx0SK3lUnKRj5_Wvgrs7ps",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"ride_id\": 50,\n   \"name\": \"Cairo\",\n    \"phone\": \"01093072634\",\n    \"email\": \"ghanem\",\n    \"status\": \"success\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api-client/v1/bookings",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api-client",
+										"v1",
+										"bookings"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete booking",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiODY3MGU0NTJmZTY2MjE2YjI1ZDhiMzViOWUzYjllYzQxYzBjZTI2ODRhMmVkNWFlYzY1MmJkZGIzYWEyYWU0Mjc1NjI0YTExM2RkYzY4MDIiLCJpYXQiOjE3MDA3NDU3ODIuOTc4NTg5LCJuYmYiOjE3MDA3NDU3ODIuOTc4NTkxLCJleHAiOjE3MzIzNjgxODIuOTc0NDIyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.u7VBA8BHMvYOqQNDt7hHHFKud54b-n5aKFAC-KdGp8k0swsKQqJZJI8jNwsDplkz5uRnDlyZ2NGxm2kuTbelnP9QZZpSm-rrm8jUu5bE3DV1VvI91AdP6-vzfeMp7EYAXJreizg5uoVFrIBWnKCK75fdHORa2fvFQP9krlIkdMiU3h8kztfXp6AGA1a5Ei5Dom7JVYdWj3inWOscRmB-Q8LsRXKPbEWCtcj7cFVDgaNEPZ-QC3V4MeJk15bmHmr9GfQBONRlg1vrPoakTcoHjJ9KnwG4y8D7_go07Urg6dInB_ktck1EFcl2O2KSUrsrBvFnBPS6ng_02Cj76TwsnG3hoGnZ5fU6jtA0JITTxyRDEpf4BkYi7nzIBcakk3P5lzzbDO7UV8XO1BHI97s9oXeyFNnFr7p3bSHTlvdHrxwE94wnZBZ-7vuRE9cCFlFh23-8FiXJJ06OtBSZ2Q--ZxV12Lt5Iw-FQksQYTXwWip8RiJRA-Gwkx1rVP5DYNLipnBpzG7De6xCweMe7noSUIJau9pxD9Cj4SrTtRChoI6FUY5ivgiL5YQtkBpwoGDKLFtM-woTe7wmzFO2Nh3Qeyat8F2gisB3B346b2QMPULACtvKfgmVrX71RDm9KcDo97G0SjYRBVY1lUI_6fhe4ppX01hM8ylm_Zg_NdrKr7c",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/v1/bookings/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"bookings",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Trips",
+					"item": [
+						{
+							"name": "view Trips",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api-client/v1/trips?departure_place=Leashire&arrival_time&departure_time",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api-client",
+										"v1",
+										"trips"
+									],
+									"query": [
+										{
+											"key": "departure_place",
+											"value": "Leashire"
+										},
+										{
+											"key": "arrival_place",
+											"value": "Morissettehaven",
+											"disabled": true
+										},
+										{
+											"key": "arrival_time",
+											"value": null
+										},
+										{
+											"key": "departure_time",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Client-login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"client@client.com\",\n    \"password\":\"password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api-client/v1/signin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api-client",
+								"v1",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "client rigester",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"client@client.com\",\n  \"name\":\"ghanem\",\n    \"password\":\"password\",\n        \"password_confirmation\":\"password\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api-client/v1/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api-client",
+								"v1",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Admin Api",
+			"item": [
+				{
+					"name": "Bus",
+					"item": [
+						{
+							"name": "buses",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept-encoding": true,
+									"accept": true
+								}
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiODU0YzU4ODZhZWQ4Nzk5NWY5NzYwZTE4NDYzMDEwZjg5NjVhNjE2Nzg1ZjYwMjFkZTE5NzE5ZTc2NWM1NGEyN2VlOTNjMGQzMmQ2ZjgyOTAiLCJpYXQiOjE3MDA4NTExNDkuNzM5NzQxLCJuYmYiOjE3MDA4NTExNDkuNzM5NzQyLCJleHAiOjE3MzI0NzM1NDkuNzM4MjU4LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.gSIzhn4ZsH8M3OlvZMR2riI4cYrr-IYDmFjqwOz0c13hMm4Vka41h7OEQFQdqW3_0nD-KZAiqWYJU55qv4LiTPTpqzTAN64BTjtakLlNISGU_sbtKI_FlUcByvaCBKbS2rvAbcvASyPGkNUxOMZ2ZjWQmWzorcD02iRoKoRejbcyF06FvkP06eXBMiPdyHshSSQ5-FHXyW5yJY1fJS_r34BqIygKFBXAkwyVTx8JjQqdf7XbFFICUVqGqYdFpB6ISBJl-_1yvlUvVRxsePIURg61CtFs-siKlKQ1uFYzJIPD1aNA9tyswj_G0YqLZmTZaWop4IxYQ6GSHgMABLEM8AqMp2mm5CxZYgZqFqvqdPEDQQv2hvdhN3G4uluTIam-Vl9zYWM81b2RPd69OeTBLO8wU-LvddAZag8rKCjKt_I4ZiAd0eGZCYgtUGtJCOqUL99IXWYR19DIU62xweLlWPx7-KHdt3E9XRiGZ4nbDKJPrkq6LgAFoKN0inP23DQth3UzleKkyLLQSRIwRrnFJu-o9XyiT5ETkuPI4ZA5AV6Yc-7MGI7IL1ODt52Tzz3wer6LHo-79XUvumsHGNapSzEVsGR93ntAfnq31PCmNzTiPUzWGMOwyw-8Yxri0iNiobEDDApQQHWiEXM2SiQSUc11yqDNgR-i7PtpnJzCWok",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/api/v1/buses",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"buses"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Trip",
+					"item": [
+						{
+							"name": "view Trrips",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true,
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiODY3MGU0NTJmZTY2MjE2YjI1ZDhiMzViOWUzYjllYzQxYzBjZTI2ODRhMmVkNWFlYzY1MmJkZGIzYWEyYWU0Mjc1NjI0YTExM2RkYzY4MDIiLCJpYXQiOjE3MDA3NDU3ODIuOTc4NTg5LCJuYmYiOjE3MDA3NDU3ODIuOTc4NTkxLCJleHAiOjE3MzIzNjgxODIuOTc0NDIyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.u7VBA8BHMvYOqQNDt7hHHFKud54b-n5aKFAC-KdGp8k0swsKQqJZJI8jNwsDplkz5uRnDlyZ2NGxm2kuTbelnP9QZZpSm-rrm8jUu5bE3DV1VvI91AdP6-vzfeMp7EYAXJreizg5uoVFrIBWnKCK75fdHORa2fvFQP9krlIkdMiU3h8kztfXp6AGA1a5Ei5Dom7JVYdWj3inWOscRmB-Q8LsRXKPbEWCtcj7cFVDgaNEPZ-QC3V4MeJk15bmHmr9GfQBONRlg1vrPoakTcoHjJ9KnwG4y8D7_go07Urg6dInB_ktck1EFcl2O2KSUrsrBvFnBPS6ng_02Cj76TwsnG3hoGnZ5fU6jtA0JITTxyRDEpf4BkYi7nzIBcakk3P5lzzbDO7UV8XO1BHI97s9oXeyFNnFr7p3bSHTlvdHrxwE94wnZBZ-7vuRE9cCFlFh23-8FiXJJ06OtBSZ2Q--ZxV12Lt5Iw-FQksQYTXwWip8RiJRA-Gwkx1rVP5DYNLipnBpzG7De6xCweMe7noSUIJau9pxD9Cj4SrTtRChoI6FUY5ivgiL5YQtkBpwoGDKLFtM-woTe7wmzFO2Nh3Qeyat8F2gisB3B346b2QMPULACtvKfgmVrX71RDm9KcDo97G0SjYRBVY1lUI_6fhe4ppX01hM8ylm_Zg_NdrKr7c",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/v1/trips",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"trips"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Creat rider",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiODY3MGU0NTJmZTY2MjE2YjI1ZDhiMzViOWUzYjllYzQxYzBjZTI2ODRhMmVkNWFlYzY1MmJkZGIzYWEyYWU0Mjc1NjI0YTExM2RkYzY4MDIiLCJpYXQiOjE3MDA3NDU3ODIuOTc4NTg5LCJuYmYiOjE3MDA3NDU3ODIuOTc4NTkxLCJleHAiOjE3MzIzNjgxODIuOTc0NDIyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.u7VBA8BHMvYOqQNDt7hHHFKud54b-n5aKFAC-KdGp8k0swsKQqJZJI8jNwsDplkz5uRnDlyZ2NGxm2kuTbelnP9QZZpSm-rrm8jUu5bE3DV1VvI91AdP6-vzfeMp7EYAXJreizg5uoVFrIBWnKCK75fdHORa2fvFQP9krlIkdMiU3h8kztfXp6AGA1a5Ei5Dom7JVYdWj3inWOscRmB-Q8LsRXKPbEWCtcj7cFVDgaNEPZ-QC3V4MeJk15bmHmr9GfQBONRlg1vrPoakTcoHjJ9KnwG4y8D7_go07Urg6dInB_ktck1EFcl2O2KSUrsrBvFnBPS6ng_02Cj76TwsnG3hoGnZ5fU6jtA0JITTxyRDEpf4BkYi7nzIBcakk3P5lzzbDO7UV8XO1BHI97s9oXeyFNnFr7p3bSHTlvdHrxwE94wnZBZ-7vuRE9cCFlFh23-8FiXJJ06OtBSZ2Q--ZxV12Lt5Iw-FQksQYTXwWip8RiJRA-Gwkx1rVP5DYNLipnBpzG7De6xCweMe7noSUIJau9pxD9Cj4SrTtRChoI6FUY5ivgiL5YQtkBpwoGDKLFtM-woTe7wmzFO2Nh3Qeyat8F2gisB3B346b2QMPULACtvKfgmVrX71RDm9KcDo97G0SjYRBVY1lUI_6fhe4ppX01hM8ylm_Zg_NdrKr7c",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"bus_id\": 1,\n    \"departure_place\": \"Cairo\",\n    \"arrival_place\": \"ALEX\",\n    \"departure_time\": \"2023-11-24 09:00:00\",\n    \"arrival_time\": \"2023-11-24 11:00:00\",\n    \"is_booking_open\": true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/v1/trips",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"trips"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update trip",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiODY3MGU0NTJmZTY2MjE2YjI1ZDhiMzViOWUzYjllYzQxYzBjZTI2ODRhMmVkNWFlYzY1MmJkZGIzYWEyYWU0Mjc1NjI0YTExM2RkYzY4MDIiLCJpYXQiOjE3MDA3NDU3ODIuOTc4NTg5LCJuYmYiOjE3MDA3NDU3ODIuOTc4NTkxLCJleHAiOjE3MzIzNjgxODIuOTc0NDIyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.u7VBA8BHMvYOqQNDt7hHHFKud54b-n5aKFAC-KdGp8k0swsKQqJZJI8jNwsDplkz5uRnDlyZ2NGxm2kuTbelnP9QZZpSm-rrm8jUu5bE3DV1VvI91AdP6-vzfeMp7EYAXJreizg5uoVFrIBWnKCK75fdHORa2fvFQP9krlIkdMiU3h8kztfXp6AGA1a5Ei5Dom7JVYdWj3inWOscRmB-Q8LsRXKPbEWCtcj7cFVDgaNEPZ-QC3V4MeJk15bmHmr9GfQBONRlg1vrPoakTcoHjJ9KnwG4y8D7_go07Urg6dInB_ktck1EFcl2O2KSUrsrBvFnBPS6ng_02Cj76TwsnG3hoGnZ5fU6jtA0JITTxyRDEpf4BkYi7nzIBcakk3P5lzzbDO7UV8XO1BHI97s9oXeyFNnFr7p3bSHTlvdHrxwE94wnZBZ-7vuRE9cCFlFh23-8FiXJJ06OtBSZ2Q--ZxV12Lt5Iw-FQksQYTXwWip8RiJRA-Gwkx1rVP5DYNLipnBpzG7De6xCweMe7noSUIJau9pxD9Cj4SrTtRChoI6FUY5ivgiL5YQtkBpwoGDKLFtM-woTe7wmzFO2Nh3Qeyat8F2gisB3B346b2QMPULACtvKfgmVrX71RDm9KcDo97G0SjYRBVY1lUI_6fhe4ppX01hM8ylm_Zg_NdrKr7c",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"bus_id\": 1,\n    \"departure_place\": \"Cairo\",\n    \"arrival_place\": \"ALEX\",\n    \"departure_time\": \"2023-11-24 09:00:00\",\n    \"arrival_time\": \"2023-11-24 11:00:00\",\n    \"is_booking_open\": false\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/v1/trips/51",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"trips",
+										"51"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "booking",
+					"item": [
+						{
+							"name": "add booking",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiODY3MGU0NTJmZTY2MjE2YjI1ZDhiMzViOWUzYjllYzQxYzBjZTI2ODRhMmVkNWFlYzY1MmJkZGIzYWEyYWU0Mjc1NjI0YTExM2RkYzY4MDIiLCJpYXQiOjE3MDA3NDU3ODIuOTc4NTg5LCJuYmYiOjE3MDA3NDU3ODIuOTc4NTkxLCJleHAiOjE3MzIzNjgxODIuOTc0NDIyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.u7VBA8BHMvYOqQNDt7hHHFKud54b-n5aKFAC-KdGp8k0swsKQqJZJI8jNwsDplkz5uRnDlyZ2NGxm2kuTbelnP9QZZpSm-rrm8jUu5bE3DV1VvI91AdP6-vzfeMp7EYAXJreizg5uoVFrIBWnKCK75fdHORa2fvFQP9krlIkdMiU3h8kztfXp6AGA1a5Ei5Dom7JVYdWj3inWOscRmB-Q8LsRXKPbEWCtcj7cFVDgaNEPZ-QC3V4MeJk15bmHmr9GfQBONRlg1vrPoakTcoHjJ9KnwG4y8D7_go07Urg6dInB_ktck1EFcl2O2KSUrsrBvFnBPS6ng_02Cj76TwsnG3hoGnZ5fU6jtA0JITTxyRDEpf4BkYi7nzIBcakk3P5lzzbDO7UV8XO1BHI97s9oXeyFNnFr7p3bSHTlvdHrxwE94wnZBZ-7vuRE9cCFlFh23-8FiXJJ06OtBSZ2Q--ZxV12Lt5Iw-FQksQYTXwWip8RiJRA-Gwkx1rVP5DYNLipnBpzG7De6xCweMe7noSUIJau9pxD9Cj4SrTtRChoI6FUY5ivgiL5YQtkBpwoGDKLFtM-woTe7wmzFO2Nh3Qeyat8F2gisB3B346b2QMPULACtvKfgmVrX71RDm9KcDo97G0SjYRBVY1lUI_6fhe4ppX01hM8ylm_Zg_NdrKr7c",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"ride_id\": 50,\n   \"name\": \"Cairo\",\n    \"phone\": \"01093072634\",\n    \"email\": \"ghanem\",\n    \"status\": \"\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/v1/bookings",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"bookings"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update booking",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiODY3MGU0NTJmZTY2MjE2YjI1ZDhiMzViOWUzYjllYzQxYzBjZTI2ODRhMmVkNWFlYzY1MmJkZGIzYWEyYWU0Mjc1NjI0YTExM2RkYzY4MDIiLCJpYXQiOjE3MDA3NDU3ODIuOTc4NTg5LCJuYmYiOjE3MDA3NDU3ODIuOTc4NTkxLCJleHAiOjE3MzIzNjgxODIuOTc0NDIyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.u7VBA8BHMvYOqQNDt7hHHFKud54b-n5aKFAC-KdGp8k0swsKQqJZJI8jNwsDplkz5uRnDlyZ2NGxm2kuTbelnP9QZZpSm-rrm8jUu5bE3DV1VvI91AdP6-vzfeMp7EYAXJreizg5uoVFrIBWnKCK75fdHORa2fvFQP9krlIkdMiU3h8kztfXp6AGA1a5Ei5Dom7JVYdWj3inWOscRmB-Q8LsRXKPbEWCtcj7cFVDgaNEPZ-QC3V4MeJk15bmHmr9GfQBONRlg1vrPoakTcoHjJ9KnwG4y8D7_go07Urg6dInB_ktck1EFcl2O2KSUrsrBvFnBPS6ng_02Cj76TwsnG3hoGnZ5fU6jtA0JITTxyRDEpf4BkYi7nzIBcakk3P5lzzbDO7UV8XO1BHI97s9oXeyFNnFr7p3bSHTlvdHrxwE94wnZBZ-7vuRE9cCFlFh23-8FiXJJ06OtBSZ2Q--ZxV12Lt5Iw-FQksQYTXwWip8RiJRA-Gwkx1rVP5DYNLipnBpzG7De6xCweMe7noSUIJau9pxD9Cj4SrTtRChoI6FUY5ivgiL5YQtkBpwoGDKLFtM-woTe7wmzFO2Nh3Qeyat8F2gisB3B346b2QMPULACtvKfgmVrX71RDm9KcDo97G0SjYRBVY1lUI_6fhe4ppX01hM8ylm_Zg_NdrKr7c",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"ride_id\": 50,\n   \"name\": \"Cairo\",\n    \"phone\": \"01093072634\",\n    \"email\": \"ghanem\",\n    \"status\": \"success\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/v1/bookings/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"bookings",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "show booking",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiODY3MGU0NTJmZTY2MjE2YjI1ZDhiMzViOWUzYjllYzQxYzBjZTI2ODRhMmVkNWFlYzY1MmJkZGIzYWEyYWU0Mjc1NjI0YTExM2RkYzY4MDIiLCJpYXQiOjE3MDA3NDU3ODIuOTc4NTg5LCJuYmYiOjE3MDA3NDU3ODIuOTc4NTkxLCJleHAiOjE3MzIzNjgxODIuOTc0NDIyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.u7VBA8BHMvYOqQNDt7hHHFKud54b-n5aKFAC-KdGp8k0swsKQqJZJI8jNwsDplkz5uRnDlyZ2NGxm2kuTbelnP9QZZpSm-rrm8jUu5bE3DV1VvI91AdP6-vzfeMp7EYAXJreizg5uoVFrIBWnKCK75fdHORa2fvFQP9krlIkdMiU3h8kztfXp6AGA1a5Ei5Dom7JVYdWj3inWOscRmB-Q8LsRXKPbEWCtcj7cFVDgaNEPZ-QC3V4MeJk15bmHmr9GfQBONRlg1vrPoakTcoHjJ9KnwG4y8D7_go07Urg6dInB_ktck1EFcl2O2KSUrsrBvFnBPS6ng_02Cj76TwsnG3hoGnZ5fU6jtA0JITTxyRDEpf4BkYi7nzIBcakk3P5lzzbDO7UV8XO1BHI97s9oXeyFNnFr7p3bSHTlvdHrxwE94wnZBZ-7vuRE9cCFlFh23-8FiXJJ06OtBSZ2Q--ZxV12Lt5Iw-FQksQYTXwWip8RiJRA-Gwkx1rVP5DYNLipnBpzG7De6xCweMe7noSUIJau9pxD9Cj4SrTtRChoI6FUY5ivgiL5YQtkBpwoGDKLFtM-woTe7wmzFO2Nh3Qeyat8F2gisB3B346b2QMPULACtvKfgmVrX71RDm9KcDo97G0SjYRBVY1lUI_6fhe4ppX01hM8ylm_Zg_NdrKr7c",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"ride_id\": 50,\n   \"name\": \"Cairo\",\n    \"phone\": \"01093072634\",\n    \"email\": \"ghanem\",\n    \"status\": \"success\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/v1/bookings/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"bookings",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete booking",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiODY3MGU0NTJmZTY2MjE2YjI1ZDhiMzViOWUzYjllYzQxYzBjZTI2ODRhMmVkNWFlYzY1MmJkZGIzYWEyYWU0Mjc1NjI0YTExM2RkYzY4MDIiLCJpYXQiOjE3MDA3NDU3ODIuOTc4NTg5LCJuYmYiOjE3MDA3NDU3ODIuOTc4NTkxLCJleHAiOjE3MzIzNjgxODIuOTc0NDIyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.u7VBA8BHMvYOqQNDt7hHHFKud54b-n5aKFAC-KdGp8k0swsKQqJZJI8jNwsDplkz5uRnDlyZ2NGxm2kuTbelnP9QZZpSm-rrm8jUu5bE3DV1VvI91AdP6-vzfeMp7EYAXJreizg5uoVFrIBWnKCK75fdHORa2fvFQP9krlIkdMiU3h8kztfXp6AGA1a5Ei5Dom7JVYdWj3inWOscRmB-Q8LsRXKPbEWCtcj7cFVDgaNEPZ-QC3V4MeJk15bmHmr9GfQBONRlg1vrPoakTcoHjJ9KnwG4y8D7_go07Urg6dInB_ktck1EFcl2O2KSUrsrBvFnBPS6ng_02Cj76TwsnG3hoGnZ5fU6jtA0JITTxyRDEpf4BkYi7nzIBcakk3P5lzzbDO7UV8XO1BHI97s9oXeyFNnFr7p3bSHTlvdHrxwE94wnZBZ-7vuRE9cCFlFh23-8FiXJJ06OtBSZ2Q--ZxV12Lt5Iw-FQksQYTXwWip8RiJRA-Gwkx1rVP5DYNLipnBpzG7De6xCweMe7noSUIJau9pxD9Cj4SrTtRChoI6FUY5ivgiL5YQtkBpwoGDKLFtM-woTe7wmzFO2Nh3Qeyat8F2gisB3B346b2QMPULACtvKfgmVrX71RDm9KcDo97G0SjYRBVY1lUI_6fhe4ppX01hM8ylm_Zg_NdrKr7c",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/v1/bookings/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"bookings",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "users",
+					"item": [
+						{
+							"name": "add user responsable",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNjU5MmVmMjFiNjliOTA5MmVlNDE3NjI4ODg0MTIzZmFhYzUxNTllNGNiNGQ2OGUxNDI3NTBjYjBkNzhmOWVmYzFhOGFkMjI5Nzg4OTBlMDUiLCJpYXQiOjE3MDA3ODcwNTYuNTIwMjYsIm5iZiI6MTcwMDc4NzA1Ni41MjAyNjEsImV4cCI6MTczMjQwOTQ1Ni41MTY0MSwic3ViIjoiMSIsInNjb3BlcyI6W119.s4AB7fkOWMgIW0hY_r5W5HXg11pzk7k1-nt8zfAAOp7dfsMUT2QrwxDiKxRhXl4ovZqGsF0GaeMDKBuAA625dJ2I72A505zNSzZqXHL5bvlosRAiIzrEmlq57LbQwX3gWpCjMsBO8x0KnKBeql8fw0oIPMlAUnmoOC6b9cu321UDA89FFC57UwBWOBxJ_4LyUfjxDCSb_WupoxrGBDpdxIKAjVf0EGeI7ZSpBvQ8dn6AyoPEIhm1w0YMSgQevpZd7QD08KMlT7aHc_sTNcTp9rFGLuM8dCCTpI7aToH7_RQH9OInOawXpDUueGshZUnEj7t2SwoMninTpa97_MHJ8uFUnZBaWEe-z3mCPfWVxdUkKPfnQkk2VUS69vUU80Kplf4Ye1Qi0LaIhaX1alwG2yZa_zHn9QVaVQRGfw5EvPvHtgBXdpXGDReXaBP1VAqmvHS0roDGoJA8CJTyBX2CHfPa5hkm_L-tK1WrxZPtxNloDSu_0J7DJlT4MLeZP2qgXOl4nJy7SYaco-_7PmDkTPOjyJy_ZZ57M1l_tGYMVSsftsA5ZbL14L5cBY-opzXZbBB01Kp2onCAlqtOZF_8Wd8IJOF0ab_vo6wqqwSgVmyKC9PKgmH2x9vTO1tPCQof0kaZ9ET9FwNFSHa-qWL4fE2WZxnzSRzAMZgTKKT56LA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n   \"name\": \"admain\",\n    \"password\": \"123456789\",\n    \"type\":\"isAdmin\",\n    \"email\": \"Admin@Admin.com\",\n     \"roles\":[1]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/v1/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add client",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNjU5MmVmMjFiNjliOTA5MmVlNDE3NjI4ODg0MTIzZmFhYzUxNTllNGNiNGQ2OGUxNDI3NTBjYjBkNzhmOWVmYzFhOGFkMjI5Nzg4OTBlMDUiLCJpYXQiOjE3MDA3ODcwNTYuNTIwMjYsIm5iZiI6MTcwMDc4NzA1Ni41MjAyNjEsImV4cCI6MTczMjQwOTQ1Ni41MTY0MSwic3ViIjoiMSIsInNjb3BlcyI6W119.s4AB7fkOWMgIW0hY_r5W5HXg11pzk7k1-nt8zfAAOp7dfsMUT2QrwxDiKxRhXl4ovZqGsF0GaeMDKBuAA625dJ2I72A505zNSzZqXHL5bvlosRAiIzrEmlq57LbQwX3gWpCjMsBO8x0KnKBeql8fw0oIPMlAUnmoOC6b9cu321UDA89FFC57UwBWOBxJ_4LyUfjxDCSb_WupoxrGBDpdxIKAjVf0EGeI7ZSpBvQ8dn6AyoPEIhm1w0YMSgQevpZd7QD08KMlT7aHc_sTNcTp9rFGLuM8dCCTpI7aToH7_RQH9OInOawXpDUueGshZUnEj7t2SwoMninTpa97_MHJ8uFUnZBaWEe-z3mCPfWVxdUkKPfnQkk2VUS69vUU80Kplf4Ye1Qi0LaIhaX1alwG2yZa_zHn9QVaVQRGfw5EvPvHtgBXdpXGDReXaBP1VAqmvHS0roDGoJA8CJTyBX2CHfPa5hkm_L-tK1WrxZPtxNloDSu_0J7DJlT4MLeZP2qgXOl4nJy7SYaco-_7PmDkTPOjyJy_ZZ57M1l_tGYMVSsftsA5ZbL14L5cBY-opzXZbBB01Kp2onCAlqtOZF_8Wd8IJOF0ab_vo6wqqwSgVmyKC9PKgmH2x9vTO1tPCQof0kaZ9ET9FwNFSHa-qWL4fE2WZxnzSRzAMZgTKKT56LA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n   \"name\": \"Cairo\",\n    \"password\": \"123456789\",\n    \"email\": \"ghanem@gmail.com\",\n   \n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/v1/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update users",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiODY3MGU0NTJmZTY2MjE2YjI1ZDhiMzViOWUzYjllYzQxYzBjZTI2ODRhMmVkNWFlYzY1MmJkZGIzYWEyYWU0Mjc1NjI0YTExM2RkYzY4MDIiLCJpYXQiOjE3MDA3NDU3ODIuOTc4NTg5LCJuYmYiOjE3MDA3NDU3ODIuOTc4NTkxLCJleHAiOjE3MzIzNjgxODIuOTc0NDIyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.u7VBA8BHMvYOqQNDt7hHHFKud54b-n5aKFAC-KdGp8k0swsKQqJZJI8jNwsDplkz5uRnDlyZ2NGxm2kuTbelnP9QZZpSm-rrm8jUu5bE3DV1VvI91AdP6-vzfeMp7EYAXJreizg5uoVFrIBWnKCK75fdHORa2fvFQP9krlIkdMiU3h8kztfXp6AGA1a5Ei5Dom7JVYdWj3inWOscRmB-Q8LsRXKPbEWCtcj7cFVDgaNEPZ-QC3V4MeJk15bmHmr9GfQBONRlg1vrPoakTcoHjJ9KnwG4y8D7_go07Urg6dInB_ktck1EFcl2O2KSUrsrBvFnBPS6ng_02Cj76TwsnG3hoGnZ5fU6jtA0JITTxyRDEpf4BkYi7nzIBcakk3P5lzzbDO7UV8XO1BHI97s9oXeyFNnFr7p3bSHTlvdHrxwE94wnZBZ-7vuRE9cCFlFh23-8FiXJJ06OtBSZ2Q--ZxV12Lt5Iw-FQksQYTXwWip8RiJRA-Gwkx1rVP5DYNLipnBpzG7De6xCweMe7noSUIJau9pxD9Cj4SrTtRChoI6FUY5ivgiL5YQtkBpwoGDKLFtM-woTe7wmzFO2Nh3Qeyat8F2gisB3B346b2QMPULACtvKfgmVrX71RDm9KcDo97G0SjYRBVY1lUI_6fhe4ppX01hM8ylm_Zg_NdrKr7c",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"ride_id\": 50,\n   \"name\": \"Cairo\",\n    \"phone\": \"01093072634\",\n    \"email\": \"ghanem\",\n    \"status\": \"success\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/v1/bookings/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"bookings",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "show user",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true,
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNjU5MmVmMjFiNjliOTA5MmVlNDE3NjI4ODg0MTIzZmFhYzUxNTllNGNiNGQ2OGUxNDI3NTBjYjBkNzhmOWVmYzFhOGFkMjI5Nzg4OTBlMDUiLCJpYXQiOjE3MDA3ODcwNTYuNTIwMjYsIm5iZiI6MTcwMDc4NzA1Ni41MjAyNjEsImV4cCI6MTczMjQwOTQ1Ni41MTY0MSwic3ViIjoiMSIsInNjb3BlcyI6W119.s4AB7fkOWMgIW0hY_r5W5HXg11pzk7k1-nt8zfAAOp7dfsMUT2QrwxDiKxRhXl4ovZqGsF0GaeMDKBuAA625dJ2I72A505zNSzZqXHL5bvlosRAiIzrEmlq57LbQwX3gWpCjMsBO8x0KnKBeql8fw0oIPMlAUnmoOC6b9cu321UDA89FFC57UwBWOBxJ_4LyUfjxDCSb_WupoxrGBDpdxIKAjVf0EGeI7ZSpBvQ8dn6AyoPEIhm1w0YMSgQevpZd7QD08KMlT7aHc_sTNcTp9rFGLuM8dCCTpI7aToH7_RQH9OInOawXpDUueGshZUnEj7t2SwoMninTpa97_MHJ8uFUnZBaWEe-z3mCPfWVxdUkKPfnQkk2VUS69vUU80Kplf4Ye1Qi0LaIhaX1alwG2yZa_zHn9QVaVQRGfw5EvPvHtgBXdpXGDReXaBP1VAqmvHS0roDGoJA8CJTyBX2CHfPa5hkm_L-tK1WrxZPtxNloDSu_0J7DJlT4MLeZP2qgXOl4nJy7SYaco-_7PmDkTPOjyJy_ZZ57M1l_tGYMVSsftsA5ZbL14L5cBY-opzXZbBB01Kp2onCAlqtOZF_8Wd8IJOF0ab_vo6wqqwSgVmyKC9PKgmH2x9vTO1tPCQof0kaZ9ET9FwNFSHa-qWL4fE2WZxnzSRzAMZgTKKT56LA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"ride_id\": 50,\n   \"name\": \"Cairo\",\n    \"phone\": \"01093072634\",\n    \"email\": \"ghanem\",\n    \"status\": \"success\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/v1/users/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete user",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNjU5MmVmMjFiNjliOTA5MmVlNDE3NjI4ODg0MTIzZmFhYzUxNTllNGNiNGQ2OGUxNDI3NTBjYjBkNzhmOWVmYzFhOGFkMjI5Nzg4OTBlMDUiLCJpYXQiOjE3MDA3ODcwNTYuNTIwMjYsIm5iZiI6MTcwMDc4NzA1Ni41MjAyNjEsImV4cCI6MTczMjQwOTQ1Ni41MTY0MSwic3ViIjoiMSIsInNjb3BlcyI6W119.s4AB7fkOWMgIW0hY_r5W5HXg11pzk7k1-nt8zfAAOp7dfsMUT2QrwxDiKxRhXl4ovZqGsF0GaeMDKBuAA625dJ2I72A505zNSzZqXHL5bvlosRAiIzrEmlq57LbQwX3gWpCjMsBO8x0KnKBeql8fw0oIPMlAUnmoOC6b9cu321UDA89FFC57UwBWOBxJ_4LyUfjxDCSb_WupoxrGBDpdxIKAjVf0EGeI7ZSpBvQ8dn6AyoPEIhm1w0YMSgQevpZd7QD08KMlT7aHc_sTNcTp9rFGLuM8dCCTpI7aToH7_RQH9OInOawXpDUueGshZUnEj7t2SwoMninTpa97_MHJ8uFUnZBaWEe-z3mCPfWVxdUkKPfnQkk2VUS69vUU80Kplf4Ye1Qi0LaIhaX1alwG2yZa_zHn9QVaVQRGfw5EvPvHtgBXdpXGDReXaBP1VAqmvHS0roDGoJA8CJTyBX2CHfPa5hkm_L-tK1WrxZPtxNloDSu_0J7DJlT4MLeZP2qgXOl4nJy7SYaco-_7PmDkTPOjyJy_ZZ57M1l_tGYMVSsftsA5ZbL14L5cBY-opzXZbBB01Kp2onCAlqtOZF_8Wd8IJOF0ab_vo6wqqwSgVmyKC9PKgmH2x9vTO1tPCQof0kaZ9ET9FwNFSHa-qWL4fE2WZxnzSRzAMZgTKKT56LA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/v1/bookings/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"bookings",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Roles",
+					"item": []
+				},
+				{
+					"name": "Permissions",
+					"item": []
+				}
+			]
+		},
+		{
+			"name": "admain_login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"password\": \"123456789\",\n    \"email\":\"ghanem@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v1/signin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
