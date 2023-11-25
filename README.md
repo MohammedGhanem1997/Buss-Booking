@@ -9,7 +9,7 @@ Online Bus Booking System
 # How To Run Project
 -   `composer install`,
 -   `composer dump-autoload`,
--   `php -r file_exists('.env') || copy('.env.example', '.env');`
+-   ` repelace.env.example' to '.env';`
 -  `php artisan key:generate`,
 -  `php artisan config:cache`,
 -   `php artisan migrate --seed`
